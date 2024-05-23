@@ -1,6 +1,6 @@
 <section class="listing">
     <img class="listing-photo" [src] = "housingData.photo" alt="photo of {{housingData.name}}">
-    <h2 class="listing-heading">{{housingData.name}},{{housingData.state}}</h2>
+    <h2 class="listing-heading">{{housingData.name}}, {{housingData.state}}</h2>
     <p class="listing-location">{{housingData.city}} </p>
     
     <a [routerLink] = "['/details', housingData.id]" >Learn More</a>

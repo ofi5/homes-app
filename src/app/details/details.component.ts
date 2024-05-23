@@ -2,7 +2,7 @@ import { Component , inject} from '@angular/core';
 import { ActivatedRoute, RouterModule } from '@angular/router';
 import { HousingService } from '../housing.service';
 import { Housingdata } from '../housingdata';
-import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 
 
 @Component({
@@ -18,7 +18,7 @@ export class DetailsComponent {
   houseLocation: Housingdata | undefined;
   
   applyForm = new FormGroup({
-    firstName: new FormControl(''),
+    firstName: new FormControl('',Validators.required),
     lastName: new FormControl(''),
     email: new FormControl('')
   })

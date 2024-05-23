@@ -19,9 +19,9 @@ export class HomeComponent {
   
   constructor() {
 
-    this.filteredDataList = this.housingService.getAllHousingLocations()
-    console.log(this.housingDataList)
-
+    this.housingDataList = this.housingService.getAllHousingLocations()
+    this.filteredDataList = this.housingDataList
+    
     // this.housingService.getAllHousingLocations().then((housingDataList: Housingdata[])=>{
     //   this.housingDataList = housingDataList
     // this.filteredDataList = housingDataList

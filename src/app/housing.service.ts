@@ -6,6 +6,8 @@ import { Housingdata } from './housingdata';
 })
 export class HousingService {
     // url = 'http://localhost:3000/locations';
+
+    userInputData: any = []
     housingDataList = [
           {
               "id": 0,
@@ -133,6 +135,9 @@ export class HousingService {
     } 
    
     submitApplication(firstName: string, lastName:string, email: string){
+
+      this.userInputData+={firstName:firstName,lastName:lastName, email:email}
       console.log("Your data has been submitted")
+      
     }
 }

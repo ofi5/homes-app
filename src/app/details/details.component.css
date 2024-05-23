@@ -1,7 +1,7 @@
 .listing-photo {
     height: 600px;
     width: 40%;
-    object-fit: cover;
+    /* object-fit: cover; */
     border-radius: 30px;
     float: right;
   }
@@ -12,10 +12,7 @@
     margin-bottom: 25px;
   }
   
-  .listing-location::before {
-    content: url('/assets/location-pin.svg') / '';
-  }
-  
+
   .listing-location {
     font-size: 24pt;
     margin-bottom: 15px;

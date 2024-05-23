@@ -16,13 +16,17 @@ export class HomeComponent {
   housingDataList: Housingdata[] = [];
   housingService: HousingService = inject(HousingService)
   filteredDataList:Housingdata[] = []
+  
   constructor() {
 
-    this.housingService.getAllHousingLocations().then((housingDataList: Housingdata[])=>{
-      this.housingDataList = housingDataList
-    this.filteredDataList = housingDataList
+    this.filteredDataList = this.housingService.getAllHousingLocations()
+    console.log(this.housingDataList)
 
-    });
+    // this.housingService.getAllHousingLocations().then((housingDataList: Housingdata[])=>{
+    //   this.housingDataList = housingDataList
+    // this.filteredDataList = housingDataList
+
+    // });
  
 
 
